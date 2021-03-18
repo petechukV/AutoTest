@@ -1,0 +1,6 @@
+.idea
+allure-results
+install
+selenium
+target/maven-status
+target/maven-arhives
