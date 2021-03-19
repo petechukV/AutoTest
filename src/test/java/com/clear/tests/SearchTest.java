@@ -32,6 +32,7 @@ public class SearchTest extends ClearTests{
         searchPage.IsSearchImputVisible();
         searchPage.SendText("Blouse");
         searchPage.ClickSearch();
+        searchPage.IsSearchResultAre("Blouse");
         searchPage.GetScrinshot();
     }
 

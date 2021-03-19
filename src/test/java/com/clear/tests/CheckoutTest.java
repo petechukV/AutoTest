@@ -1,7 +1,6 @@
 package com.clear.tests;
 
 import com.clear.pages.CatalogPage;
-import com.clear.pages.CategoryPage;
 import com.clear.pages.HomePage;
 import org.testng.annotations.Test;
 
@@ -11,7 +10,6 @@ public class CheckoutTest extends ClearTests {
     }
 
         HomePage homePage;
-        CategoryPage categoryPage;
         CatalogPage catalogPage;
 
 
@@ -19,13 +17,12 @@ public class CheckoutTest extends ClearTests {
         public void Before () {
             super.Before();
             homePage = new HomePage(this.getDriver());
-            categoryPage = new CategoryPage(this.getDriver());
             catalogPage = new CatalogPage(this.getDriver());
 
         }
 
         @Test(description = "Check that user can place order")
-        public void CheckoutTest () {
+        public void CheckoutsTest () {
 
         }
     }
