@@ -11,8 +11,8 @@ public class ClearTests extends MainTest {
 
     @Override
     protected String getStages(Stages stages) {
-        String test = "https://minoori.perspective.net.ua//";
-        String stage = "https://stage.minoori.com/";
+        String test = "https://minoori.perspective.net.ua/";
+        String stage = "https://minoori.perspective.net.ua/";
         String prod = "";
         switch (stages) {
             case test:
