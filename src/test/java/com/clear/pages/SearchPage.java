@@ -35,5 +35,8 @@ public class SearchPage extends ClearMainPage {
     @Step("Search result contain")
     private void IsSearchResultContainText (String result) { isTextContains(By.xpath(Locator.LOCATOR_SEARCH_RESULT),result,10,"result not contain text");}
 
+    @Step("GoTo result")
+    public void GoToResult(){ moveTo(By.xpath(Locator.LOCATOR_SEARCH_RESULT),5,"Cant find result");}
+
 
 }
