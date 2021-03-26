@@ -25,22 +25,21 @@ public class SearchTest extends ClearTests{
     @Test(description = "Valid search")
     public void SearchTestValid() throws IOException {
         homePage.IsMainPageLoad();
-        homePage.IsMailpopupVisible();
-        homePage.ClickOnMailPop();
+        homePage.CleanHomePage();
         homePage.IsSearchVisible();
         homePage.ClickOnSearch();
         searchPage.IsSearchImputVisible();
-        searchPage.SendText("Blouse");
+        searchPage.SendText("M");
         searchPage.ClickSearch();
-        searchPage.IsSearchResultAre("Blouse");
+        searchPage.IsSearchResultAre("M");
+        searchPage.GoToResult();
         searchPage.GetScrinshot();
     }
 
     @Test(description = "Unvalid data")
     public void SearchTestUnValid() throws IOException {
         homePage.IsMainPageLoad();
-        homePage.IsMailpopupVisible();
-        homePage.ClickOnMailPop();
+        homePage.CleanHomePage();
         homePage.IsSearchVisible();
         homePage.ClickOnSearch();
         searchPage.IsSearchImputVisible();

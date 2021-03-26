@@ -6,12 +6,10 @@ import org.openqa.selenium.WebDriver;
 
 
 public class HomePage extends ClearMainPage {
-    int category = getRandomInt(1,3);
-    int typeOfProduct = getRandomInt(1,4);
-    String LOCATOR_MENU_CATEGORY = "/html[1]/body[1]/div[3]/header[1]/div[1]/div[1]/ul[1]/li["+ category +"]/a[1]";
-    String LOCATOR_MENU_TYPE = "//header/div[1]/div[1]/ul[1]/li["+ category +"]/ul[1]/li["+ typeOfProduct +"]/a[1]";
-
-    //header/div[1]/div[1]/ul[1]/li[1*]/ul[1]/li[1*]/a[1]
+  //  int category = getRandomInt(0,2);
+  //  int typeOfProduct = getRandomInt(0,3);
+  //  String LOCATOR_MENU_CATEGORY = "/html[1]/body[1]/div[3]/header[1]/div[1]/div[1]/ul[1]/li["+ category +"]/a[1]";
+  //  String LOCATOR_MENU_TYPE = "//header/div[1]/div[1]/ul[1]/li["+ category +"]/ul[1]/li["+ typeOfProduct +"]/a[1]";
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -22,12 +20,25 @@ public class HomePage extends ClearMainPage {
     public void IsMainPageLoad(){
         isPageload(10,"Page isnt load for 10 sec");
     }
+    @Step("Cleaning page")
+    public void CleanHomePage(){
+        IsMailpopupVisible();
+        ClickOnMailPop();
+        IsPoliceVisible();
+        ClickOnPolice();
+    }
 
     @Step("Is mail pop-up visible")
-    public void IsMailpopupVisible() {isDisplayed(By.xpath(Locator.LOCATOR_HOME_MAIL), 20, "Mail pop-up Not visible");}
+    private void IsMailpopupVisible() {isDisplayed(By.xpath(Locator.LOCATOR_HOME_MAIL), 20, "Mail pop-up Not visible");}
 
     @Step("Click on X")
-    public void ClickOnMailPop(){ clickOnElement(By.xpath(Locator.LOCATOR_HOME_MAIL),5,"not clicked" );}
+    private void ClickOnMailPop(){ clickOnElement(By.xpath(Locator.LOCATOR_HOME_MAIL),5,"not clicked" );}
+
+    @Step("Is Police visible")
+    private void IsPoliceVisible(){ isDisplayed(By.xpath(Locator.LOCATOR_HOME_POLICE),10, "not visible");}
+
+    @Step("Click on police")
+    private void ClickOnPolice(){ getElement(By.xpath(Locator.LOCATOR_HOME_POLICE),5,"Not find").click();}
 
     @Step("Is search is visible")
     public void IsSearchVisible(){isDisplayed(By.xpath(Locator.LOCATOR_SEARCH_HOME),15, "Search field doesn`t visible" ); }
@@ -43,8 +54,8 @@ public class HomePage extends ClearMainPage {
 
     @Step("Open category")
     public void ClickOnCategory () {
-        moveTo(By.xpath(LOCATOR_MENU_CATEGORY),10,"Not moved to category");
-        clickOnElement(By.xpath(LOCATOR_MENU_TYPE),10,"Type of product not clicked");
+   //     moveTo(By.xpath(LOCATOR_MENU_CATEGORY),10,"Not moved to category");
+     //   clickOnElement(By.xpath(LOCATOR_MENU_TYPE),10,"Type of product not clicked");
     }
 
 }

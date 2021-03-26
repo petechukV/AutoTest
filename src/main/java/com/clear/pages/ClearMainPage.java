@@ -15,12 +15,11 @@ public class ClearMainPage extends MainPages {
 
     public ClearMainPage(WebDriver driver) {
         this.driver = driver;
-        Dimension dm = new Dimension(1920,1080);
-        driver.manage().window().setSize(dm);
+        driver.manage().window().maximize();
     }
 
     public void GetScrinshot () throws IOException {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
-        FileUtils.copyFile(scrFile, new File("D:\\AutoTests\\screen.png"));}
+        FileUtils.copyFile(scrFile, new File("C:\\AutoTests\\result.png"));}
 }
