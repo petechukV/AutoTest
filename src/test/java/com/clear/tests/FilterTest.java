@@ -11,6 +11,7 @@ public class FilterTest extends ClearTests {
     public FilterTest() {
         super(Platform.desktop);
     }
+
     HomePage homePage;
     CatalogPage catalogPage;
 
@@ -24,13 +25,18 @@ public class FilterTest extends ClearTests {
     }
 
     @Test(description = "Check that filters work")
-    public void FiltersTest() throws IOException {
+    public void FiltersTests() throws IOException {
         homePage.IsMainPageLoad();
+        homePage.CleanHomePage();
         homePage.IsMenuButtonVisible();
         homePage.ClickOnBurgerMenu();
+        homePage.IsCategoryVisible();
         homePage.ClickOnCategory();
-        homePage.GetScrinshot();
-
+        catalogPage.IsCategotyPageLoad();
+        catalogPage.IsSortVisible();
+        catalogPage.ClickOnSort();
+        catalogPage.UseSortOption();
+        catalogPage.GetScrinshot();
     }
 
 }

@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 
 
 public class HomePage extends ClearMainPage {
-  //  int category = getRandomInt(0,2);
-  //  int typeOfProduct = getRandomInt(0,3);
-  //  String LOCATOR_MENU_CATEGORY = "/html[1]/body[1]/div[3]/header[1]/div[1]/div[1]/ul[1]/li["+ category +"]/a[1]";
-  //  String LOCATOR_MENU_TYPE = "//header/div[1]/div[1]/ul[1]/li["+ category +"]/ul[1]/li["+ typeOfProduct +"]/a[1]";
+    int category = getRandomInt(1,3);
+    int typeOfProduct = getRandomInt(1,4);
+    String LOCATOR_MENU_CATEGORY = "/html[1]/body[1]/div[3]/header[1]/div[1]/div[1]/ul[1]/li["+ category +"]/a[1]";
+    String LOCATOR_MENU_TYPE = "//header/div[1]/div[1]/ul[1]/li["+ category +"]/ul[1]/li["+ typeOfProduct +"]/a[1]";
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -40,6 +40,15 @@ public class HomePage extends ClearMainPage {
     @Step("Click on police")
     private void ClickOnPolice(){ getElement(By.xpath(Locator.LOCATOR_HOME_POLICE),5,"Not find").click();}
 
+    @Step("Show cart")
+    public void ShowCart() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        getElement(By.xpath(Locator.LOCATOR_HOME_CART),10,"Not opened cart").click();}
+
     @Step("Is search is visible")
     public void IsSearchVisible(){isDisplayed(By.xpath(Locator.LOCATOR_SEARCH_HOME),15, "Search field doesn`t visible" ); }
 
@@ -52,10 +61,13 @@ public class HomePage extends ClearMainPage {
     @Step("Open Burger menu")
     public void ClickOnBurgerMenu () { clickOnElement(By.xpath(Locator.LOCATOR_HOME_MENU),10,"Burger menu button not clicked");}
 
+    @Step("is category visible")
+    public void IsCategoryVisible(){ isDisplayed(By.xpath(LOCATOR_MENU_CATEGORY),10, "Not visible");}
+
     @Step("Open category")
     public void ClickOnCategory () {
-   //     moveTo(By.xpath(LOCATOR_MENU_CATEGORY),10,"Not moved to category");
-     //   clickOnElement(By.xpath(LOCATOR_MENU_TYPE),10,"Type of product not clicked");
+        moveTo(By.xpath(LOCATOR_MENU_CATEGORY),10,"Not moved to category");
+        clickOnElement(By.xpath(LOCATOR_MENU_TYPE),10,"Type of product not clicked");
     }
 
 }

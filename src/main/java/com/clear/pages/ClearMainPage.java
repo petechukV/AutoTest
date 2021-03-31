@@ -5,6 +5,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,8 +18,16 @@ public class ClearMainPage extends MainPages {
         this.driver = driver;
         driver.manage().window().maximize();
     }
+    public void waitingSomeTime(int time){
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void GetScrinshot () throws IOException {
+        waitingSomeTime(1000);
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
         FileUtils.copyFile(scrFile, new File("C:\\AutoTests\\result.png"));}
