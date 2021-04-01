@@ -24,8 +24,20 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_PRODUCT_CART = "//button[@id='product-addtocart-button']";
 
     static String LOCATOR_CHECKOUT_SECURE = "//span[contains(text(),'Checkout Securely')]";
+    static String LOCATOR_CHECKOUT_ADDRESS = "//button[@class='addres_manually']";
+    static String LOCATOR_CHECKOUT_SHIPPING_VENDOR = "//ul[1]/li[1]/label[1]";
+    static String LOCATOR_CHECKOUT_CONTINUE = "//button[contains(text(),'Continue')]";
+    static String LOCATOR_CHECKOUT_PAYMENT_CARD = "//input[@id='vnecoms_stripe_cc_number']";
+    static String LOCATOR_CHECKOUT_PAYMENT_DATE = "//input[@id='vnecoms_stripe_expiration']";
+    static String LOCATOR_CHECKOUT_PAYMENT_YER = "//input[@id='vnecoms_stripe_expiration_yr']";
+    static String LOCATOR_CHECKOUT_PAYMENT_CV2 = "//input[@id='vnecoms_stripe_cc_cid']";
+    static String LOCATOR_CHECKOUT_PAYMENT_MAKE = "//button[@class='button action primary']";
+
+    static String LOCATOR_LOGIN_LOG = "//input[@id='ajaxlogin-email']";
+    static String LOCATOR_LOGIN_PAS = "//input[@id='ajaxlogin-pass']";
+    static String LOCATOR_LOGIN_BUTTON = "//button[@id='ajaxlogin-send']";
 
 
-    static String LOCATOR_CHECKOUT_SHIPPING_VENDOR = "//div[@id='checkout-shipping-method-load']/dl[1]/dd[1]/ul[1]/li[1]/input[@type='radio']";
+
 
 }

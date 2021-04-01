@@ -42,7 +42,12 @@ public class CheckoutTest extends ClearTests {
             checkoutPage.ViewCart();
             checkoutPage.ClickOnSecureCheckout();
             checkoutPage.IsPageLoad();
-
+            checkoutPage.FillLogInForm("petechukvlad@gmail.com","Privatsose24");
+            checkoutPage.ClickOnEnterAddress();
+            checkoutPage.ChouseVendorShiping();
+            checkoutPage.GoToPaymenth();
+            checkoutPage.FillPaymenthMethod("5555555555554444","07","2023","343");
+            checkoutPage.waitingSomeTime(6000);
             checkoutPage.GetScrinshot();
         }
     }
