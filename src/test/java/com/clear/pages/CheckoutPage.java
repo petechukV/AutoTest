@@ -29,7 +29,6 @@ public class CheckoutPage extends ClearMainPage {
         waitingSomeTime(5000);
         clickOnElement(By.xpath(Locator.LOCATOR_CHECKOUT_SECURE),10,"Not open secure checkout");
     }
-
     @Step("Log in form")
     public void FillLogInForm(String log, String pas){
         IsFormVisible();

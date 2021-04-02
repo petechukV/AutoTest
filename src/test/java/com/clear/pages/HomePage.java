@@ -20,6 +20,7 @@ public class HomePage extends ClearMainPage {
     public void IsMainPageLoad(){
         isPageload(10,"Page isnt load for 10 sec");
     }
+
     @Step("Cleaning page")
     public void CleanHomePage(){
         IsMailpopupVisible();
@@ -47,7 +48,8 @@ public class HomePage extends ClearMainPage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        getElement(By.xpath(Locator.LOCATOR_HOME_CART),10,"Not opened cart").click();}
+        getElement(By.xpath(Locator.LOCATOR_HOME_CART),10,"Not opened cart").click();
+    }
 
     @Step("Is search is visible")
     public void IsSearchVisible(){isDisplayed(By.xpath(Locator.LOCATOR_SEARCH_HOME),15, "Search field doesn`t visible" ); }
@@ -70,4 +72,9 @@ public class HomePage extends ClearMainPage {
         clickOnElement(By.xpath(LOCATOR_MENU_TYPE),10,"Type of product not clicked");
     }
 
+    @Step("is account visible")
+    public void IsAccountVisible() { isDisplayed(By.xpath(Locator.LOCATOR_HOME_ACCOUNT),10,"Account not visible");}
+
+    @Step("click on account")
+    public void ClickOnAccount() { clickOnElement(By.xpath(Locator.LOCATOR_HOME_ACCOUNT),10,"Not clikabel");}
 }

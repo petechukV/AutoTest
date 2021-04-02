@@ -17,6 +17,7 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_HOME_POLICE = "//button[@id='btn-cookie-allow']";
     static String LOCATOR_HOME_CART = "//a[@class='action showcart']";
     static String LOCATOR_HOME_CARD_VIEW = "//span[contains(text(),'View Cart')]";
+    static String LOCATOR_HOME_ACCOUNT = "//div/a[@class='account']";
 
     static String LOCATOR_CATEGORY_SORT = "//span[@class='current']";
 
@@ -36,6 +37,11 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_LOGIN_LOG = "//input[@id='ajaxlogin-email']";
     static String LOCATOR_LOGIN_PAS = "//input[@id='ajaxlogin-pass']";
     static String LOCATOR_LOGIN_BUTTON = "//button[@id='ajaxlogin-send']";
+
+    static String LOCATOR_LOGIN_HOME_LOG = "//input[@id='email']";
+    static String LOCATOR_LOGIN_HOME_PAS = "//input[@id='pass']";
+    static String LOCATOR_LOGIN_HOME_BUTTON = "//button[@class='action login primary']";
+    static String LOCATOR_LOGOUT_SINGUP = "//a[contains(text(),'Sign Out')]";
 
 
 

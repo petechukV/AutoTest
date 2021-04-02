@@ -33,7 +33,7 @@ public class SearchTest extends ClearTests{
         searchPage.ClickSearch();
         searchPage.IsSearchResultAre("M");
         searchPage.GoToResult();
-        searchPage.GetScrinshot();
+        searchPage.GetScrinshot("Serarch_valid.png");
     }
 
     @Test(description = "Unvalid data")
@@ -45,7 +45,7 @@ public class SearchTest extends ClearTests{
         searchPage.IsSearchImputVisible();
         searchPage.SendText("afdhhf");
         searchPage.ClickSearch();
-        searchPage.GetScrinshot();
+        searchPage.GetScrinshot("Search_unvalid.png");
     }
 
 }

@@ -3,6 +3,7 @@ package com.clear.tests;
 import com.clear.pages.CatalogPage;
 import com.clear.pages.CheckoutPage;
 import com.clear.pages.HomePage;
+import com.clear.pages.LoginLogoutPage;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -48,6 +49,6 @@ public class CheckoutTest extends ClearTests {
             checkoutPage.GoToPaymenth();
             checkoutPage.FillPaymenthMethod("5555555555554444","07","2023","343");
             checkoutPage.waitingSomeTime(6000);
-            checkoutPage.GetScrinshot();
+            checkoutPage.GetScrinshot("checkout.png");
         }
     }
