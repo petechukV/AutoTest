@@ -43,6 +43,8 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_LOGIN_HOME_BUTTON = "//button[@class='action login primary']";
     static String LOCATOR_LOGOUT_SINGUP = "//a[contains(text(),'Sign Out')]";
 
+    static String LOCATOR_CREATE_BUTTON = "//span[contains(text(),'Sign up')]";
+
 
 
 
