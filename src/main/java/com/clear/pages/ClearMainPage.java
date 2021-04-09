@@ -27,7 +27,7 @@ public class ClearMainPage extends MainPages {
     }
 
     public void GetScrinshot (String result) throws IOException {
-        waitingSomeTime(1000);
+        waitingSomeTime(2000);
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
         FileUtils.copyFile(scrFile, new File("C:\\AutoTests\\"+result));}

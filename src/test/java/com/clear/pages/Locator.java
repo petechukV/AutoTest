@@ -44,6 +44,13 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_LOGOUT_SINGUP = "//a[contains(text(),'Sign Out')]";
 
     static String LOCATOR_CREATE_BUTTON = "//span[contains(text(),'Sign up')]";
+    static String LOCATOR_CREATE_FIRSTNAME = "//input[@id='firstname']";
+    static String LOCATOR_CREATE_LASTNAME = "//input[@id='lastname']";
+    static String LOCATOR_CREATE_MAIL = "//input[@id='email_address']";
+    static String LOCATOR_CREATE_PASS = "//input[@id='password']";
+    static String LOCATOR_CREATE_CONFPASS = "//input[@id='password-confirmation']";
+    static String LOCATOR_CREATE_CBUTTON = "//button[@class='action submit primary']";
+    static String LOCATOR_CREATE_POLICE = "//input[@id='privacy_policy']";
 
 
 

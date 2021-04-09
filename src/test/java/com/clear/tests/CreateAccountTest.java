@@ -31,7 +31,7 @@ public class CreateAccountTest extends ClearTests{
         homePage.ClickOnAccount();
         createAccount.ClickOnSingUp();
         createAccount.IsCreatePageLoad();
-
+        createAccount.FillCreateForm();
         createAccount.GetScrinshot("Create.png");
     }
 }
