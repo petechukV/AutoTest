@@ -29,9 +29,9 @@ public class SearchTest extends ClearTests{
         homePage.IsSearchVisible();
         homePage.ClickOnSearch();
         searchPage.IsSearchImputVisible();
-        searchPage.SendText("M");
+        searchPage.SendText("Mini");
         searchPage.ClickSearch();
-        searchPage.IsSearchResultAre("M");
+        searchPage.IsSearchResultAre("Mini");
         searchPage.GoToResult();
         searchPage.GetScrinshot("Serarch_valid.png");
     }

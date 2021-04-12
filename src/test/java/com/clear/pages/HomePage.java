@@ -8,8 +8,8 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends ClearMainPage {
     int category = getRandomInt(1,3);
     int typeOfProduct = getRandomInt(1,4);
-    String LOCATOR_MENU_CATEGORY = "/html[1]/body[1]/div[3]/header[1]/div[1]/div[1]/ul[1]/li["+ category +"]/a[1]";
-    String LOCATOR_MENU_TYPE = "//header/div[1]/div[1]/ul[1]/li["+ category +"]/ul[1]/li["+ typeOfProduct +"]/a[1]";
+    String LOCATOR_MENU_CATEGORY = "//header/div[1]/div[1]/ul[1]/li["+ category +"]";
+    String LOCATOR_MENU_TYPE = "//header/div[1]/div[1]/ul[1]/li["+ category +"]/ul[1]/li["+ typeOfProduct +"]";
 
     public HomePage(WebDriver driver) {
         super(driver);

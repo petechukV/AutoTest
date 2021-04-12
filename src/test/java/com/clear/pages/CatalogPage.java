@@ -2,6 +2,7 @@ package com.clear.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class CatalogPage extends ClearMainPage {
@@ -26,5 +27,7 @@ public class CatalogPage extends ClearMainPage {
     @Step("use sort")
     public void UseSortOption(){ getElement(By.xpath(LOCATOR_CATEGORY_SORT_OPTION),10,"Sort not used").click();}
 
+    @Step("is product visible")
+    public void IsProductVisible(){ isDisplayed(By.xpath(Locator.LOCATOR_CATEGORY_PRODUCT),10,"not displayed"); }
 
 }

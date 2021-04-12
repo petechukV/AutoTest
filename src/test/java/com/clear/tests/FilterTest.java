@@ -36,6 +36,7 @@ public class FilterTest extends ClearTests {
         catalogPage.IsSortVisible();
         catalogPage.ClickOnSort();
         catalogPage.UseSortOption();
+        catalogPage.IsProductVisible();
         catalogPage.GetScrinshot("Filter.png");
     }
 

@@ -8,9 +8,9 @@ public class Locator extends ClearMainPage {
         super(driver);
     }
     static String LOCATOR_SEARCH_PAGE = "//input[@id='search']";
-    static String LOCATOR_SEARCH_BUTTON = "//body/div[4]/aside[1]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/button[1]";
+    static String LOCATOR_SEARCH_BUTTON = "//button[@class='action search']";
     static String LOCATOR_SEARCH_HOME = "//a[@id='open-search']";
-    static String LOCATOR_SEARCH_RESULT = "//body/div[3]/main[1]/div[2]/div[1]/div[6]/div[1]/div[2]/ol[1]/li[1]";
+    static String LOCATOR_SEARCH_RESULT = "//ol[@class='products list items product-items']";
 
     static String LOCATOR_HOME_MAIL = "//button[@id='buttonClose-right-first']";
     static String LOCATOR_HOME_MENU = "//header/div[1]/button[1]";
@@ -20,6 +20,7 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_HOME_ACCOUNT = "//div/a[@class='account']";
 
     static String LOCATOR_CATEGORY_SORT = "//span[@class='current']";
+    static String LOCATOR_CATEGORY_PRODUCT = "//li[@class='productItem']";
 
     static String LOCATOR_PRODUCT = "//ol[1]/li[1]/a[@class='product photo product-item-photo']";
     static String LOCATOR_PRODUCT_CART = "//button[@id='product-addtocart-button']";
@@ -51,8 +52,4 @@ public class Locator extends ClearMainPage {
     static String LOCATOR_CREATE_CONFPASS = "//input[@id='password-confirmation']";
     static String LOCATOR_CREATE_CBUTTON = "//button[@class='action submit primary']";
     static String LOCATOR_CREATE_POLICE = "//input[@id='privacy_policy']";
-
-
-
-
 }
