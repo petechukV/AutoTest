@@ -17,7 +17,7 @@ public class SearchTest extends BbookTests{
     }
 
     @Test(description = "search test")
-    public void SearchTest() throws IOException {
+    public void SearchTests() throws IOException {
         homePage.IsMainPageLoad();
         homePage.UseSearch("Boy");
         homePage.IsResultContain("Boy");

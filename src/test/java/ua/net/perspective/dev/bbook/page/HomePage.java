@@ -15,6 +15,7 @@ public class HomePage extends BbookPages {
     @Step("use search")
     public void UseSearch(String text){
         IsSearchVisible();
+        waitingSomeTime(3000);
         getElement(By.xpath(Locators.LOCATOR_HOME_SEARCH),timeForWaiting,"not get search").sendKeys(text);
         SubmitSearchForm();
     }
@@ -27,4 +28,14 @@ public class HomePage extends BbookPages {
 
     @Step("is result contain")
     public void IsResultContain(String result){ isTextContains(By.xpath(Locators.LOCATOR_SEARCH_RESULT),result,timeForWaiting,"Result not contain text");}
+
+    @Step("click on home login button")
+    public void ClickOnLoginHome(){
+        IsLoginHomeVisible();
+        waitingSomeTime(5000);
+        getElement(By.xpath(Locators.LOCATOR_HOME_LOGIN),timeForWaiting,"not clicked home login").click();
+    }
+
+    @Step("Is login button visible")
+    private void IsLoginHomeVisible(){isDisplayed(By.xpath(Locators.LOCATOR_HOME_LOGIN),timeForWaiting,"home login not visible");}
 }
