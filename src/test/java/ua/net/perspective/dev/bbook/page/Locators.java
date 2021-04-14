@@ -13,5 +13,7 @@ public class Locators extends BbookPages {
     static String LOCATOR_LOGIN_MAIL = "//input[@id='email']";
     static String LOCATOR_LOGIN_PASS = "//input[@id='pass']";
     static String LOCATOR_LOGIN_BUTTON = "//button[@id='send2']";
+    static String LOCATOR_LOGIN_LOGOUT = "//a[@class='opener']";
+    static String LOCATOR_LOGIN_LOGOUT_LINCK = "//a[@class ='out-in-alert logged']";
 
 }

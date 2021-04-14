@@ -26,5 +26,7 @@ public class LoginLogoutTest extends BbookTests{
     loginLogoutPage.IsLoginPageLoad();
     loginLogoutPage.FillLoginForm("qatestv79@gmail.com","Hesoyam15");
     loginLogoutPage.GetScrinshot("LoginBB.png");
+    loginLogoutPage.ClickOnLogout();
+    loginLogoutPage.GetScrinshot("LogoutBB.png");
     }
 }

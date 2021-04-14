@@ -24,6 +24,20 @@ public class LoginLogoutPage extends BbookPages {
         isDisplayed(By.xpath(Locators.LOCATOR_LOGIN_MAIL), timeForWaiting, "Mail field not visible");
         isDisplayed(By.xpath(Locators.LOCATOR_LOGIN_PASS), timeForWaiting, "Password field not visible");
         isDisplayed(By.xpath(Locators.LOCATOR_LOGIN_BUTTON), timeForWaiting, "Log In button not visible");
-
     }
+
+    @Step("logout")
+    public void ClickOnLogout(){
+        IsLogoutVisible();
+        clickOnElement(By.xpath(Locators.LOCATOR_LOGIN_LOGOUT),timeForWaiting,"not clicked");
+        IsLogoutLinckVisible();
+        waitingSomeTime(1000);
+        clickOnElement(By.xpath(Locators.LOCATOR_LOGIN_LOGOUT_LINCK),timeForWaiting,"Not clicked linck");
+    }
+
+    @Step("is logout visible")
+    private void IsLogoutVisible(){ isDisplayed(By.xpath(Locators.LOCATOR_LOGIN_LOGOUT),timeForWaiting,"Not visible logout");}
+
+    @Step("is logout linck visible")
+    private void IsLogoutLinckVisible(){isDisplayed(By.xpath(Locators.LOCATOR_LOGIN_LOGOUT_LINCK),timeForWaiting,"Linck not visible");}
 }
