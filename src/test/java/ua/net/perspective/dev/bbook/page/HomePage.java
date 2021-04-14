@@ -38,4 +38,14 @@ public class HomePage extends BbookPages {
 
     @Step("Is login button visible")
     private void IsLoginHomeVisible(){isDisplayed(By.xpath(Locators.LOCATOR_HOME_LOGIN),timeForWaiting,"home login not visible");}
+
+    @Step("click on book catalog")
+    public void ClickOnBookCatalog(){
+        IsCatalogBookVisible();
+        waitingSomeTime(1000);
+        clickOnElement(By.xpath(Locators.LOCATOR_HOME_BOOK),timeForWaiting,"not clicked  on catalog");
+    }
+
+    @Step("is catalog visible")
+    private void IsCatalogBookVisible(){isDisplayed(By.xpath(Locators.LOCATOR_HOME_BOOK),timeForWaiting,"not visible catalog");}
 }

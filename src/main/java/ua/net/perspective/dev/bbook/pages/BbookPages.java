@@ -32,6 +32,7 @@ public class BbookPages extends MainPages {
     }
 
     public void DoScrole(Integer scroll){
+        waitingSomeTime(1000);
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0,"+scroll+");");
     }
