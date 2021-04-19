@@ -4,3 +4,4 @@ install
 selenium
 target/maven-status
 target/maven-arhives
+*png
