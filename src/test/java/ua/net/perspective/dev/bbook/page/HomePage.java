@@ -5,12 +5,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ua.net.perspective.dev.bbook.pages.BbookPages;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class HomePage extends BbookPages {
 
     public HomePage(WebDriver driver) {super(driver);}
 
     @Step("is page load")
-    public void IsMainPageLoad(){ isPageload(10,"page not loaded before 10 sec");}
+    public void IsMainPageLoad(){ isPageload(10,"page not loaded before 10 sec");System.out.println(Locators.LOCATOR_PRICE_TEST);}
 
     @Step("use search")
     public void UseSearch(String text){
@@ -48,4 +52,13 @@ public class HomePage extends BbookPages {
 
     @Step("is catalog visible")
     private void IsCatalogBookVisible(){isDisplayed(By.xpath(Locators.LOCATOR_HOME_BOOK),timeForWaiting,"not visible catalog");}
+
+    @Step("Http code request")
+    public int getResponseCode() throws IOException {
+        URL url = new URL(this.driver.getCurrentUrl());
+        HttpURLConnection huc = (HttpURLConnection)url.openConnection();
+        huc.setRequestMethod("GET");
+        huc.connect();
+        return huc.getResponseCode();
+    }
 }

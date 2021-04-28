@@ -28,4 +28,10 @@ public class SortTests extends BbookTests{
         catalogPage.DoScrole(250);
         catalogPage.GetScrinshot("SortBB.png");
     }
+
+    @Test(description = "Get hhtp code cikle")
+    public void GetHttpCode() throws IOException {
+       Integer satus = homePage.getResponseCode();
+       System.out.println(satus);
+    }
 }

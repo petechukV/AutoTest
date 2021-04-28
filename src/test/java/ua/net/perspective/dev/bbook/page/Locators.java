@@ -20,4 +20,5 @@ public class Locators extends BbookPages {
 
     static String LOCATOR_BOOK_SORT = "//select[@class='ais-SortBy-select']";
     static String LOCATOR_SORT_LIST = "//select[@class='ais-SortBy-select']/option[2]";
+    static String LOCATOR_PRICE_TEST = "//body/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[1]/div[1]/div[1]/div[1]/span[1]/span[3]/span[1]";
 }
