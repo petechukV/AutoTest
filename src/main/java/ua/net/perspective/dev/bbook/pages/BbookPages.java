@@ -7,6 +7,8 @@ import org.openqa.selenium.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class BbookPages extends MainPages {
 
@@ -35,5 +37,13 @@ public class BbookPages extends MainPages {
         waitingSomeTime(1000);
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0,"+scroll+");");
+    }
+
+    public int getResponseCode() throws IOException {
+        URL url = new URL(this.driver.getCurrentUrl());
+        HttpURLConnection huc = (HttpURLConnection)url.openConnection();
+        huc.setRequestMethod("GET");
+        huc.connect();
+        return huc.getResponseCode();
     }
 }
