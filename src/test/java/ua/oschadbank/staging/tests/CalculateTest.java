@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import ua.oschadbank.staging.pages.HomePage;
 import ua.oschadbank.staging.pages.IpotekaPage;
 
+import java.io.IOException;
+
 public class CalculateTest extends OschadTests {
     HomePage homePage;
     IpotekaPage ipotekaPage;
@@ -20,13 +22,12 @@ public class CalculateTest extends OschadTests {
     }
 
     @Test(description = "Ipoteca 7 test")
-    public void Ipoteca7Test(){
+    public void Ipoteca7Test() throws IOException {
         homePage.IsMainPageLoad();
         homePage.waitingSomeTime(300);
         homePage.GoToIpotekaCredit();
         ipotekaPage.IsIpotekaPageLoad();
         ipotekaPage.FillIpotekaCalculate();
-
-
+        ipotekaPage.GetScrinshot("Oschad.png");
     }
 }

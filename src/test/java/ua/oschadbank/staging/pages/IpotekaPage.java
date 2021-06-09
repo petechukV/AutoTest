@@ -7,20 +7,42 @@ import org.openqa.selenium.WebDriver;
 public class IpotekaPage extends OschadPage{
     public IpotekaPage(WebDriver driver) { super(driver);}
 
-    Integer fullSuma = getRandomInt(3000000,12000000);
+    String fullSuma = String.valueOf(getRandomInt(300000,1200000));
+    String trayPeriod = String.valueOf(getRandomInt(30,90));
+    String timeCredit = String.valueOf(getRandomInt(12,240));
+
 
     @Step("is page load")
     public void IsIpotekaPageLoad(){ isPageload(10,"page not loaded before 10 sec");}
 
     @Step("fill calculate form")
     public void FillIpotekaCalculate(){
-        DoScrole(2000);
+        DoScrole(1700);
         IsCalculatorVisible();
         moveTo(By.xpath(Locators.LOCATOR_IPOTEKA_CALCULATE),timeForWaiting,"calculate side");
-        getElement(By.xpath(Locators.LOCATOR_IPOTEKA_FULLSUM),timeForWaiting,"full suma").sendKeys(fullSuma.toString());
+
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_FULLSUM),timeForWaiting,"full suma");
+        getElement(By.xpath(Locators.LOCATOR_IPOTEKA_FULLSUM),timeForWaiting,"full suma").sendKeys(fullSuma);
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKS_FIRSTPAY),timeForWaiting,"period of cred");
+        getElement(By.xpath(Locators.LOCATOR_IPOTEKS_FIRSTPAY),timeForWaiting,"period of cred").sendKeys(trayPeriod);
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_TIME),timeForWaiting,"time of credit");
+        getElement(By.xpath(Locators.LOCATOR_IPOTEKA_TIME),timeForWaiting,"time of credit").sendKeys(timeCredit);
+
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_ADITIONAL_NOTARY),timeForWaiting,"notary");
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_ADITIONAL_APPRAICER),timeForWaiting,"notary");
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_ADITIONAL_STRAH),timeForWaiting,"notary");
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_ADITIONAL_STRLIVE),timeForWaiting,"notary");
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_ADITIONAL_PENSION),timeForWaiting,"notary");
+        waitingSomeTime(100);
+        clickOnElement(By.xpath(Locators.LOCATOR_IPOTEKA_ADITIONAL_ADMIN),timeForWaiting,"notary");
+
     }
-
-
 
     @Step("is calculator visible")
     private void IsCalculatorVisible(){

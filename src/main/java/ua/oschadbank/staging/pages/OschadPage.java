@@ -11,7 +11,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class OschadPage extends MainPages {
-    public static final int timeForWaiting = 10;
+    public static final int timeForWaiting = 25;
 
     public OschadPage(WebDriver driver) {
         this.driver = driver;

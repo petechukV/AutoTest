@@ -12,11 +12,11 @@ public class Locators extends OschadPage{
     static String LOCATOR_IPOTEKA_FULLSUM = "//input[@id='fullSum']";
     static String LOCATOR_IPOTEKS_FIRSTPAY = "//input[@id='firstPayProc']";
     static String LOCATOR_IPOTEKA_TIME = "//input[@id='timeCount']";
-    static String LOCATOR_IPOTEKA_ADITIONAL_NOTARY = "//input[@id='services_notary']";
-    static String LOCATOR_IPOTEKA_ADITIONAL_APPRAICER = "//input[@id='services_appraiser']";
-    static String LOCATOR_IPOTEKA_ADITIONAL_STRAH = "//input[@id='services_strah_subject']";
-    static String LOCATOR_IPOTEKA_ADITIONAL_STRLIVE = "//input[@id='services_strah_lives']";
-    static String LOCATOR_IPOTEKA_ADITIONAL_PENSION = "//input[@id='services_pension_insurance']";
-    static String LOCATOR_IPOTEKA_ADITIONAL_ADMIN = "//input[@id='services_admin_commision']";
+    static String LOCATOR_IPOTEKA_ADITIONAL_NOTARY = "//label[contains(text(),'Послуги нотаріуса')]";
+    static String LOCATOR_IPOTEKA_ADITIONAL_APPRAICER = "//label[contains(text(),'Послуги оцінювача')]";
+    static String LOCATOR_IPOTEKA_ADITIONAL_STRAH = "//label[contains(text(),'Страхування нерухомого майна (предмету іпотеки)')]";
+    static String LOCATOR_IPOTEKA_ADITIONAL_STRLIVE = "//label[contains(text(),'Страхування життя')]";
+    static String LOCATOR_IPOTEKA_ADITIONAL_PENSION = "//label[contains(text(),\"Збори на обов'язкове державне пенсійне страхування\")]";
+    static String LOCATOR_IPOTEKA_ADITIONAL_ADMIN = "//label[contains(text(),'Адміністративні збори')]";
 
 }
